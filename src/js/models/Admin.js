@@ -1,7 +1,7 @@
 const sequelize = require('../connection');
 const { Model, DataTypes } = require('sequelize');
 class Admin extends Model {}
-User.init(
+Admin.init(
     {
         id: {
             type: DataTypes.INT
