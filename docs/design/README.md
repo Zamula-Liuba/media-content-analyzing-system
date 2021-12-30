@@ -124,7 +124,7 @@ SurveyAction"1,1" -- "0,*" SurveyState
 @enduml
 
 ## ER-model
-![ER.png](../../../assets/database_assets/ER.png)
+![ER](https://user-images.githubusercontent.com/71746212/147731631-6e38a25c-6718-495f-9656-dc27484cdb3f.png)
 @startuml
 entity User <<ENTITY>> {
 id:INT
@@ -218,3 +218,4 @@ SelectedAlt "1, 1" <-- "0, *" Alt
 @enduml
 ## Реляційна схема
 ![EER](https://user-images.githubusercontent.com/71746212/147731584-2cd73935-d9e3-4a18-878a-5681a8d7db37.png)
+
