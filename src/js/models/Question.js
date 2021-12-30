@@ -4,13 +4,30 @@ const { Survey } = require('./Survey');
 class Question extends Model {}
 Question.init(
     {
+        id: {
+            type: DataTypes.INTEGER
+        },
         type: {
             type: DataTypes.STRING
         },
         text: {
             type: DataTypes.STRING
         },
-        Survey_id: {
+        max: {
+            type: DataTypes.INTEGER
+        },
+        min: {
+            type: DataTypes.INTEGER
+        },
+        Answer_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: Survey,
+                key: 'id'
+            }
+        },
+        SelectedAlt_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
