@@ -1,7 +1,6 @@
 const sequelize = require('../connection');
 const { Model, DataTypes } = require('sequelize');
-const { Expert } = require('./Expert');
-const { Question } = require('./Question');
+const { User } = require('./User');
 const { SelectedAlt } = require('./SelectedAlt');
 class Answer extends Model {}
 Answer.init(
@@ -17,14 +16,6 @@ Answer.init(
             allowNull: false,
             references: {
                 model: Expert,
-                key: 'id'
-            }
-        },
-        Question_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-            references: {
-                model: Question,
                 key: 'id'
             }
         },
