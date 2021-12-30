@@ -6,9 +6,23 @@ User.init(
         username: {
             type: DataTypes.STRING
         },
+        level:{
+            type: DataTypes.INT
+        },
+        password: {
+            type: DataTypes.STRING
+        },
         mail: {
             type: DataTypes.STRING
-        }
+        },
+        Mentor_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+            references: {
+                model: Mentor,
+                key: 'id'
+            }
+        },  
     },
 
     {
